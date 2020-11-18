@@ -10,12 +10,11 @@ import Foundation
 
 
 protocol ServiceProtocol {
-    func request<T: Decodable>(wrapper: ServiceWrapper, shouldInvokeErrorForcefully: Bool, completion: @escaping GenericClosure<Result<T>>)
-    func clearAllSessions()
+    func request<T: Decodable>(wrapper: ServiceWrapper, completion: @escaping GenericClosure<Result<T>>)
 }
 
 extension ServiceProtocol {
-    func request<T: Decodable>(wrapper: ServiceWrapper, shouldCompleteForcefully: Bool = false, headerClosure: HeaderClosure? = nil, completion: @escaping GenericClosure<Result<T>>) {
-        request(wrapper: wrapper, shouldInvokeErrorForcefully: shouldCompleteForcefully, completion: completion, headerClosure: headerClosure)
+    func request<T: Decodable>(wrapper: ServiceWrapper, completion: @escaping GenericClosure<Result<T>>) {
+        request(wrapper: wrapper, completion: completion)
     }
 }

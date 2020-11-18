@@ -9,9 +9,7 @@
 import Alamofire
 
 class ServiceManager {
-    
-    //   typealias HeaderClosure = GenericClosure<[String: String]>
-    
+        
     static let shared = ServiceManager()
     
     private lazy var manager: Alamofire.Session = {
@@ -26,7 +24,7 @@ class ServiceManager {
     
     func decode<T: Decodable>(request: URLRequest, completion: @escaping GenericClosure<Result<T>>) {
         
-        manager.request(request).validate().responseDecodable { [weak self] (response: AFDataResponse<T>) in
+        manager.request(request).validate().responseDecodable { (response: AFDataResponse<T>) in
             
             switch response.result {
             case .success(let result):
@@ -40,15 +38,29 @@ class ServiceManager {
 
 extension ServiceManager: ServiceProtocol {
     
-    func request<T: Decodable>(wrapper: ServiceWrapper, shouldInvokeErrorForcefully: Bool = false, completion: @escaping GenericClosure<Result<T>>) {
+    func request<T: Decodable>(wrapper: ServiceWrapper, completion: @escaping GenericClosure<Result<T>>) {
+        
         guard let request = wrapper.urlRequest else { return }
-        decode(request: request, shouldCompleteForcefully: shouldInvokeErrorForcefully, completion: completion, headerClosure: headerClosure)
+        decode(request: request, completion: completion)
+    }
+}
+
+extension ServiceWrapper: URLRequestConvertible {
+    
+    var qualifiedUrl: URL {
+        return url ?? URL(fileURLWithPath: url?.absoluteString ?? "")
     }
     
-    func clearAllSessions() {
-        manager.session.getAllTasks {
-            $0.forEach { $0.cancel() }
+    func asURLRequest() throws -> URLRequest {
+        
+        var requestParams = parameters
+        if let defaultParameters = defaultParameters {
+            requestParams = defaultParameters.merging(parameters ?? [:]) { _, custom in custom }
         }
+        
+        let urlRequest = try URLRequest(url: qualifiedUrl, method: HTTPMethod(rawValue: method.rawValue))
+                
+        return try contentType == .jsonEncoded ? Alamofire.JSONEncoding.default.encode(urlRequest, with: requestParams) : Alamofire.URLEncoding.default.encode(urlRequest, with: requestParams)
     }
 }
 
