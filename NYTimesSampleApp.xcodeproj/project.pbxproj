@@ -36,6 +36,10 @@
 		05A7787A2565644D00CD2A8C /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A778792565644D00CD2A8C /* UITableViewExtensions.swift */; };
 		3F0FCAEEE49528223FDDE6E6 /* Pods_NYTimesSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168FBE5505594F10566F7911 /* Pods_NYTimesSampleApp.framework */; };
 		C4F8FD3A4E05C36A1E8DC7EC /* Pods_NYTimesSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E673363264CA47923CF1706 /* Pods_NYTimesSampleAppTests.framework */; };
+		EAA0C87D2565BBFB000EB48F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C87C2565BBFB000EB48F /* ActivityIndicator.swift */; };
+		EAA0C8802565BD3B000EB48F /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C87F2565BD3B000EB48F /* Navigatable.swift */; };
+		EAA0C8822565BD74000EB48F /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8812565BD74000EB48F /* UIViewControllerExtensions.swift */; };
+		EAA0C8842565BDAA000EB48F /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8832565BDAA000EB48F /* UIStoryboardExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		26BE1A83CC5EC4B034060E80 /* Pods-NYTimesSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimesSampleApp.release.xcconfig"; path = "Target Support Files/Pods-NYTimesSampleApp/Pods-NYTimesSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		5666E1747A640D45E0954525 /* Pods-NYTimesSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimesSampleAppTests.release.xcconfig"; path = "Target Support Files/Pods-NYTimesSampleAppTests/Pods-NYTimesSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		861E1849FBF95C2C3419EB3E /* Pods-NYTimesSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimesSampleApp.debug.xcconfig"; path = "Target Support Files/Pods-NYTimesSampleApp/Pods-NYTimesSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EAA0C87C2565BBFB000EB48F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		EAA0C87F2565BD3B000EB48F /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
+		EAA0C8812565BD74000EB48F /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		EAA0C8832565BDAA000EB48F /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		05A77843256507EE00CD2A8C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EAA0C87E2565BD1E000EB48F /* NavigationManager */,
 				05A7784F256511E000CD2A8C /* Service */,
 			);
 			path = Managers;
@@ -171,6 +180,7 @@
 		05A7784625650B0400CD2A8C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EAA0C87B2565BBD4000EB48F /* ActivityIndicator */,
 				05A7784C25650F2F00CD2A8C /* Result */,
 				05A7784725650B8C00CD2A8C /* Utils */,
 				05A778542565130B00CD2A8C /* Configuration.swift */,
@@ -246,6 +256,8 @@
 				05A7786A256551C100CD2A8C /* UIColorExtensions.swift */,
 				05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */,
 				05A778792565644D00CD2A8C /* UITableViewExtensions.swift */,
+				EAA0C8812565BD74000EB48F /* UIViewControllerExtensions.swift */,
+				EAA0C8832565BDAA000EB48F /* UIStoryboardExtensions.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -311,6 +323,22 @@
 				5666E1747A640D45E0954525 /* Pods-NYTimesSampleAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EAA0C87B2565BBD4000EB48F /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C87C2565BBFB000EB48F /* ActivityIndicator.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		EAA0C87E2565BD1E000EB48F /* NavigationManager */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C87F2565BD3B000EB48F /* Navigatable.swift */,
+			);
+			path = NavigationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,10 +527,14 @@
 				05A77851256511FE00CD2A8C /* ServiceModule.swift in Sources */,
 				05A7785E256541BC00CD2A8C /* MostViewed.swift in Sources */,
 				05A77878256563BF00CD2A8C /* UIResponderExtensions.swift in Sources */,
+				EAA0C8822565BD74000EB48F /* UIViewControllerExtensions.swift in Sources */,
+				EAA0C87D2565BBFB000EB48F /* ActivityIndicator.swift in Sources */,
+				EAA0C8842565BDAA000EB48F /* UIStoryboardExtensions.swift in Sources */,
 				05A778672565502100CD2A8C /* BaseViewController.swift in Sources */,
 				05A7787025655A9900CD2A8C /* ArticleViewModel.swift in Sources */,
 				05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */,
 				057BB59C2564FE8500015C48 /* SceneDelegate.swift in Sources */,
+				EAA0C8802565BD3B000EB48F /* Navigatable.swift in Sources */,
 				05A778452565080100CD2A8C /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AZ4K72LAA;
 				INFOPLIST_FILE = NYTimesSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,6 +720,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AZ4K72LAA;
 				INFOPLIST_FILE = NYTimesSampleApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
