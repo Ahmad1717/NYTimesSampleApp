@@ -6,7 +6,8 @@ target 'NYTimesSampleApp' do
   use_frameworks!
 
   # Pods for NYTimesSampleApp
-	pod 'Alamofire', '5.0.2'
+	pod 'Alamofire',                '~> 5.0.2'
+  pod 'NVActivityIndicatorView',  '~> 4.8.0'
 
   target 'NYTimesSampleAppTests' do
     inherit! :search_paths
