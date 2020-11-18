@@ -29,6 +29,11 @@
 		05A778672565502100CD2A8C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A778662565502100CD2A8C /* BaseViewController.swift */; };
 		05A778692565510100CD2A8C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A778682565510100CD2A8C /* Color.xcassets */; };
 		05A7786B256551C100CD2A8C /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7786A256551C100CD2A8C /* UIColorExtensions.swift */; };
+		05A7787025655A9900CD2A8C /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */; };
+		05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7787325655B5100CD2A8C /* ArticleCell.swift */; };
+		05A7787625655B6400CD2A8C /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A7787525655B6400CD2A8C /* ArticleCell.xib */; };
+		05A77878256563BF00CD2A8C /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */; };
+		05A7787A2565644D00CD2A8C /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A778792565644D00CD2A8C /* UITableViewExtensions.swift */; };
 		3F0FCAEEE49528223FDDE6E6 /* Pods_NYTimesSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168FBE5505594F10566F7911 /* Pods_NYTimesSampleApp.framework */; };
 		C4F8FD3A4E05C36A1E8DC7EC /* Pods_NYTimesSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E673363264CA47923CF1706 /* Pods_NYTimesSampleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +76,11 @@
 		05A778662565502100CD2A8C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		05A778682565510100CD2A8C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		05A7786A256551C100CD2A8C /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		05A7787325655B5100CD2A8C /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		05A7787525655B6400CD2A8C /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
+		05A778792565644D00CD2A8C /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		0E673363264CA47923CF1706 /* Pods_NYTimesSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimesSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECC9EFF578A5650AE42479A /* Pods-NYTimesSampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimesSampleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NYTimesSampleAppTests/Pods-NYTimesSampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		168FBE5505594F10566F7911 /* Pods_NYTimesSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimesSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +133,8 @@
 		057BB5982564FE8500015C48 /* NYTimesSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				05A7787125655B2700CD2A8C /* View */,
+				05A7786E25655A8400CD2A8C /* ViewModel */,
 				05A7786C2565575300CD2A8C /* Controllers */,
 				05A7785C2565417700CD2A8C /* Model */,
 				05A778562565136D00CD2A8C /* Extensions */,
@@ -232,6 +244,8 @@
 			children = (
 				05A7786225654C7D00CD2A8C /* UIViewExtensions.swift */,
 				05A7786A256551C100CD2A8C /* UIColorExtensions.swift */,
+				05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */,
+				05A778792565644D00CD2A8C /* UITableViewExtensions.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -252,6 +266,31 @@
 				05A778662565502100CD2A8C /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		05A7786E25655A8400CD2A8C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		05A7787125655B2700CD2A8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05A7787225655B2D00CD2A8C /* ArticleCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05A7787225655B2D00CD2A8C /* ArticleCell */ = {
+			isa = PBXGroup;
+			children = (
+				05A7787325655B5100CD2A8C /* ArticleCell.swift */,
+				05A7787525655B6400CD2A8C /* ArticleCell.xib */,
+			);
+			path = ArticleCell;
 			sourceTree = "<group>";
 		};
 		42ACC299415CE5DE48ACF4F1 /* Frameworks */ = {
@@ -361,6 +400,7 @@
 				057BB5A62564FE8600015C48 /* LaunchScreen.storyboard in Resources */,
 				05A778692565510100CD2A8C /* Color.xcassets in Resources */,
 				057BB5A32564FE8600015C48 /* Assets.xcassets in Resources */,
+				05A7787625655B6400CD2A8C /* ArticleCell.xib in Resources */,
 				057BB5A12564FE8500015C48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A7787A2565644D00CD2A8C /* UITableViewExtensions.swift in Sources */,
 				05A778602565434600CD2A8C /* Article.swift in Sources */,
 				05A7784925650B9800CD2A8C /* Utils.swift in Sources */,
 				057BB59E2564FE8500015C48 /* WelcomeViewController.swift in Sources */,
@@ -457,7 +498,10 @@
 				05A778552565130B00CD2A8C /* Configuration.swift in Sources */,
 				05A77851256511FE00CD2A8C /* ServiceModule.swift in Sources */,
 				05A7785E256541BC00CD2A8C /* MostViewed.swift in Sources */,
+				05A77878256563BF00CD2A8C /* UIResponderExtensions.swift in Sources */,
 				05A778672565502100CD2A8C /* BaseViewController.swift in Sources */,
+				05A7787025655A9900CD2A8C /* ArticleViewModel.swift in Sources */,
+				05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */,
 				057BB59C2564FE8500015C48 /* SceneDelegate.swift in Sources */,
 				05A778452565080100CD2A8C /* ServiceManager.swift in Sources */,
 			);

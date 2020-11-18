@@ -13,15 +13,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ServiceManager.shared.request(wrapper: ServiceWrapper(module: MostViewedModule.fetchMostViewed)) { (result: Result<MostViewedResponse>) in
-                        
-            switch result {
-            case .success(let response):
-                print(response.results.first?.title)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        
     }
 }
 

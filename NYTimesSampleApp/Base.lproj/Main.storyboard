@@ -32,7 +32,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="GeL-uC-71X" kind="show" id="17Q-zI-aBa"/>
+                                    <segue destination="GeL-uC-71X" kind="show" id="ZNZ-QB-lAv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,6 +105,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="d6M-MW-3Mb" id="Rf5-AV-Tzd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3g-Fm-IJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +137,7 @@
         <image name="More" width="24" height="24"/>
         <image name="Search" width="24" height="24"/>
         <namedColor name="NavigationColor">
-            <color red="0.46999999999999997" green="0.88200000000000001" blue="0.76400000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.4699999988079071" green="0.88200002908706665" blue="0.76399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
