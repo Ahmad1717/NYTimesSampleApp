@@ -2,6 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Configuration</key>
+	<dict>
+		<key>Environment</key>
+		<dict>
+			<key>ApiVersion</key>
+			<string>${API_VERSION}</string>
+			<key>Deployment</key>
+			<string>$(DEPLOYMENT)</string>
+			<key>Host</key>
+			<string>$(HOST)</string>
+			<key>Protocol</key>
+			<string>$(PROTOCOL)</string>
+			<key>Scheme</key>
+			<string>$(SCHEME)</string>
+			<key>Module</key>
+			<string>$(MODULE)</string>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

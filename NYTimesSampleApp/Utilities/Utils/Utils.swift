@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+typealias GenericClosure<T> = (T) -> Void
