@@ -16,25 +16,20 @@ class ListingViewController: BaseViewController {
         }
     }
     
+    
     @IBOutlet private (set) weak var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureView()
+    }
+}
+
+private extension ListingViewController {
+    func configureView() {
         title = "NY Time Most Popular"
         tableView?.registerNib(ArticleCell.self)
-        
-        ServiceManager.shared.request(wrapper: ServiceWrapper(module: MostViewedModule.fetchMostViewed)) { (result: Result<MostViewedResponse>) in
-                        
-            switch result {
-            case .success(let response):
-                 response.results.forEach { [weak self] article in
-                    self?.articleViewModels.append(ArticleViewModel(article: article))
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 }
 

@@ -10,34 +10,40 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBAction func buttonActionGetStarted(_ sender: UIButton) {
         
-        
+        // fetch data
+        fetchMostViewedArticles { articles in
+            
+            // push listing controller
+            ListingViewController.push { controller in
+                var articleViewModels = [ArticleViewModel]()
+                
+                articles.forEach { articleViewModels.append(ArticleViewModel(article: $0)) }
+                
+                controller.articleViewModels = articleViewModels
+            }
+        }
     }
 }
 
-enum MostViewedModule: ServiceModule {
-    
-    case fetchMostViewed
-    
-    var method: RequestMethod {
-        switch self {
-        case .fetchMostViewed: return .get
+private extension WelcomeViewController {
+    func fetchMostViewedArticles(completion: @escaping GenericClosure<[Article]>) {
+        
+        // show loading indicator
+        LoadingIndicator.shared.show()
+        
+        // fetch data
+        ServiceManager.shared.request(wrapper: ServiceWrapper(module: MostViewedModule.fetchMostViewed)) {  (result: Result<MostViewedResponse>) in
+            
+            // hide loading indicator
+            LoadingIndicator.shared.dismiss()
+                        
+            switch result {
+            case .success(let response): completion(response.results)
+            case .failure(let error): print(error)
+            }
         }
     }
-    
-    var module: Module? {
-        switch self {
-        case .fetchMostViewed: return .viewed
-        }
-    }
-    
-    var path: Path? {
-        switch self {
-        case .fetchMostViewed: return .period
-        }
-    }
-    
-    var parameters: Parameters? { nil }
 }

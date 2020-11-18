@@ -17,3 +17,28 @@ struct MostViewedResponse: Decodable {
         case results
     }
 }
+
+enum MostViewedModule: ServiceModule {
+    
+    case fetchMostViewed
+    
+    var method: RequestMethod {
+        switch self {
+        case .fetchMostViewed: return .get
+        }
+    }
+    
+    var module: Module? {
+        switch self {
+        case .fetchMostViewed: return .viewed
+        }
+    }
+    
+    var path: Path? {
+        switch self {
+        case .fetchMostViewed: return .period
+        }
+    }
+    
+    var parameters: Parameters? { nil }
+}
