@@ -39,3 +39,21 @@ extension UIView {
         }
     }
 }
+
+extension UIView {
+    
+    // instantiate view from nib
+    class func instantiateFromNib<T: UIView>() -> T? {
+        return nib.instantiate(withOwner: nil, options: nil).first as? T
+    }
+    
+    // get nib from bundle
+    class var nib: UINib {
+        return UINib(nibName: nibName, bundle: nil)
+    }
+    
+    // get nib name
+    class var nibName: String {
+        return identifier
+    }
+}
