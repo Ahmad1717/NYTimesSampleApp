@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let winScene = (scene as? UIWindowScene) else { return }
 
         // Create the root view controller as needed
-        let controller = WelcomeViewController.instantiate()
+        let controller = Configurator.createWelcomeController()
         let navigationController = UINavigationController(rootViewController: controller)
 
         // Create the window. Be sure to use this initializer and not the frame one.

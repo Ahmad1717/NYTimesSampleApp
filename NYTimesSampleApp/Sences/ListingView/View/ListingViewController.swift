@@ -10,12 +10,7 @@ import UIKit
 
 class ListingViewController: BaseViewController {
     
-    var articleViewModels = [ArticleViewModel]() {
-        didSet {
-            tableView?.reloadData()
-        }
-    }
-    
+    var presenter: ListingPresenterInput?
     
     @IBOutlet private (set) weak var tableView: UITableView?
     
@@ -28,21 +23,25 @@ class ListingViewController: BaseViewController {
 
 private extension ListingViewController {
     func configureView() {
-        title = "NY Time Most Popular"
+        title = presenter?.title ?? ""
         tableView?.registerNib(ArticleCell.self)
     }
 }
 
 extension ListingViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articleViewModels.count
-    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { presenter?.numberOfRows ?? 0 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.identifier) as? ArticleCell else { return UITableViewCell()}
-        cell.articleViewModel = articleViewModels[indexPath.row]
-        
+        presenter?.configre(cell: cell, at: indexPath)
         return cell
+    }
+}
+
+extension ListingViewController: ListingPresentable {
+    
+    func reloadData() {
+        tableView?.reloadData()
     }
 }
 

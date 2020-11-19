@@ -9,8 +9,8 @@
 import Foundation
 
 struct MostViewedResponse: Decodable {
-    let status: String
-    let results: [Article]
+    let status: String?
+    let results: [Article]?
     
     private enum CodingKeys: String, CodingKey {
         case status
@@ -41,4 +41,6 @@ enum MostViewedModule: ServiceModule {
     }
     
     var parameters: Parameters? { nil }
+    
+    //apikey added to the defaults parameters
 }

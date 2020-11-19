@@ -9,10 +9,10 @@
 import Foundation
 
 struct Article: Decodable {
-    let id : Int
-    let title: String
-    let publishedDate: String
-    let byline: String
+    let id : Int?
+    let title: String?
+    let publishedDate: String?
+    let byline: String?
     
     private enum CodingKeys: String, CodingKey {
         case id

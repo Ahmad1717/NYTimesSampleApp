@@ -29,7 +29,6 @@
 		05A778672565502100CD2A8C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A778662565502100CD2A8C /* BaseViewController.swift */; };
 		05A778692565510100CD2A8C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A778682565510100CD2A8C /* Color.xcassets */; };
 		05A7786B256551C100CD2A8C /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7786A256551C100CD2A8C /* UIColorExtensions.swift */; };
-		05A7787025655A9900CD2A8C /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */; };
 		05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A7787325655B5100CD2A8C /* ArticleCell.swift */; };
 		05A7787625655B6400CD2A8C /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A7787525655B6400CD2A8C /* ArticleCell.xib */; };
 		05A77878256563BF00CD2A8C /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */; };
@@ -40,6 +39,9 @@
 		EAA0C8802565BD3B000EB48F /* Navigatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C87F2565BD3B000EB48F /* Navigatable.swift */; };
 		EAA0C8822565BD74000EB48F /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8812565BD74000EB48F /* UIViewControllerExtensions.swift */; };
 		EAA0C8842565BDAA000EB48F /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8832565BDAA000EB48F /* UIStoryboardExtensions.swift */; };
+		EAA0C8862566394D000EB48F /* ListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8852566394D000EB48F /* ListingPresenter.swift */; };
+		EAA0C88825663BF3000EB48F /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C88725663BF3000EB48F /* Configurator.swift */; };
+		EAA0C8942566476C000EB48F /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0C8932566476C000EB48F /* WelcomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,6 @@
 		05A778662565502100CD2A8C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		05A778682565510100CD2A8C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		05A7786A256551C100CD2A8C /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		05A7787325655B5100CD2A8C /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		05A7787525655B6400CD2A8C /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		05A77877256563BF00CD2A8C /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
@@ -95,6 +96,9 @@
 		EAA0C87F2565BD3B000EB48F /* Navigatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigatable.swift; sourceTree = "<group>"; };
 		EAA0C8812565BD74000EB48F /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		EAA0C8832565BDAA000EB48F /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		EAA0C8852566394D000EB48F /* ListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPresenter.swift; sourceTree = "<group>"; };
+		EAA0C88725663BF3000EB48F /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		EAA0C8932566476C000EB48F /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +145,7 @@
 		057BB5982564FE8500015C48 /* NYTimesSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				05A7787125655B2700CD2A8C /* View */,
-				05A7786E25655A8400CD2A8C /* ViewModel */,
-				05A7786C2565575300CD2A8C /* Controllers */,
+				EAA0C8892566422F000EB48F /* Sences */,
 				05A7785C2565417700CD2A8C /* Model */,
 				05A778562565136D00CD2A8C /* Extensions */,
 				05A7784625650B0400CD2A8C /* Utilities */,
@@ -180,10 +182,10 @@
 		05A7784625650B0400CD2A8C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EAA0C892256643E9000EB48F /* Configurator */,
 				EAA0C87B2565BBD4000EB48F /* ActivityIndicator */,
 				05A7784C25650F2F00CD2A8C /* Result */,
 				05A7784725650B8C00CD2A8C /* Utils */,
-				05A778542565130B00CD2A8C /* Configuration.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -244,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				05A7785D256541BC00CD2A8C /* MostViewed.swift */,
-				05A7785F2565434600CD2A8C /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,38 +263,12 @@
 			path = UIExtensions;
 			sourceTree = "<group>";
 		};
-		05A7786C2565575300CD2A8C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				05A7786D2565576800CD2A8C /* Base */,
-				05A7786425654FA900CD2A8C /* ListingViewController.swift */,
-				057BB59D2564FE8500015C48 /* WelcomeViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		05A7786D2565576800CD2A8C /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				05A778662565502100CD2A8C /* BaseViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		05A7786E25655A8400CD2A8C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				05A7786F25655A9900CD2A8C /* ArticleViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		05A7787125655B2700CD2A8C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				05A7787225655B2D00CD2A8C /* ArticleCell */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		05A7787225655B2D00CD2A8C /* ArticleCell */ = {
@@ -339,6 +314,93 @@
 				EAA0C87F2565BD3B000EB48F /* Navigatable.swift */,
 			);
 			path = NavigationManager;
+			sourceTree = "<group>";
+		};
+		EAA0C8892566422F000EB48F /* Sences */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C89125664324000EB48F /* Configurator */,
+				05A7786D2565576800CD2A8C /* Base */,
+				EAA0C88D25664295000EB48F /* WelcomeView */,
+				EAA0C88A25664259000EB48F /* ListingView */,
+			);
+			path = Sences;
+			sourceTree = "<group>";
+		};
+		EAA0C88A25664259000EB48F /* ListingView */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C890256642E8000EB48F /* Model */,
+				EAA0C88C25664272000EB48F /* View */,
+				EAA0C88B25664269000EB48F /* Presenter */,
+			);
+			path = ListingView;
+			sourceTree = "<group>";
+		};
+		EAA0C88B25664269000EB48F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C8852566394D000EB48F /* ListingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EAA0C88C25664272000EB48F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05A7787225655B2D00CD2A8C /* ArticleCell */,
+				05A7786425654FA900CD2A8C /* ListingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAA0C88D25664295000EB48F /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C88F256642A5000EB48F /* Presenter */,
+				EAA0C88E2566429F000EB48F /* View */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		EAA0C88E2566429F000EB48F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				057BB59D2564FE8500015C48 /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAA0C88F256642A5000EB48F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C8932566476C000EB48F /* WelcomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EAA0C890256642E8000EB48F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05A7785F2565434600CD2A8C /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EAA0C89125664324000EB48F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0C88725663BF3000EB48F /* Configurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		EAA0C892256643E9000EB48F /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				05A778542565130B00CD2A8C /* Configuration.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A7787A2565644D00CD2A8C /* UITableViewExtensions.swift in Sources */,
+				EAA0C8942566476C000EB48F /* WelcomePresenter.swift in Sources */,
 				05A778602565434600CD2A8C /* Article.swift in Sources */,
 				05A7784925650B9800CD2A8C /* Utils.swift in Sources */,
 				057BB59E2564FE8500015C48 /* WelcomeViewController.swift in Sources */,
@@ -526,12 +589,13 @@
 				05A778552565130B00CD2A8C /* Configuration.swift in Sources */,
 				05A77851256511FE00CD2A8C /* ServiceModule.swift in Sources */,
 				05A7785E256541BC00CD2A8C /* MostViewed.swift in Sources */,
+				EAA0C8862566394D000EB48F /* ListingPresenter.swift in Sources */,
 				05A77878256563BF00CD2A8C /* UIResponderExtensions.swift in Sources */,
 				EAA0C8822565BD74000EB48F /* UIViewControllerExtensions.swift in Sources */,
 				EAA0C87D2565BBFB000EB48F /* ActivityIndicator.swift in Sources */,
 				EAA0C8842565BDAA000EB48F /* UIStoryboardExtensions.swift in Sources */,
+				EAA0C88825663BF3000EB48F /* Configurator.swift in Sources */,
 				05A778672565502100CD2A8C /* BaseViewController.swift in Sources */,
-				05A7787025655A9900CD2A8C /* ArticleViewModel.swift in Sources */,
 				05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */,
 				057BB59C2564FE8500015C48 /* SceneDelegate.swift in Sources */,
 				EAA0C8802565BD3B000EB48F /* Navigatable.swift in Sources */,
