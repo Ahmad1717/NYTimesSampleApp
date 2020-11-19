@@ -23,11 +23,13 @@ protocol WelcomePresentable: AnyObject {
 final class WelcomePresenter: WelcomePresenterInput {
     
     private weak var view: WelcomePresentable?
+    private var interactor: ServiceProtocol?
 
     var title: String { "Welcome" }
     
-    init(view: WelcomePresentable)  {
+    init(view: WelcomePresentable, interactor: ServiceProtocol)  {
         self.view = view
+        self.interactor = interactor
     }
     
     func fetchData() {
@@ -35,7 +37,7 @@ final class WelcomePresenter: WelcomePresenterInput {
         view?.showLoadingIndicator()
         
         // fetch data
-        ServiceManager.shared.request(wrapper: ServiceWrapper(module: MostViewedModule.fetchMostViewed)) { [weak self] (result: Result<MostViewedResponse>) in
+        interactor?.request(wrapper: ServiceWrapper(module: MostViewedModule.fetchMostViewed)) { [weak self] (result: Result<MostViewedResponse>) in
             guard let weakSelf = self else { return }
             
             weakSelf.view?.hideLoadingIndicator()

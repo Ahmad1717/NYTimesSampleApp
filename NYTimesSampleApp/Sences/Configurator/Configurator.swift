@@ -20,7 +20,7 @@ class Configurator {
     
     static func createWelcomeController() -> WelcomeViewController {
         let viewController = WelcomeViewController.instantiate()
-        let presenter = WelcomePresenter(view: viewController)
+        let presenter = WelcomePresenter(view: viewController, interactor: ServiceManager.shared)
         viewController.presenter = presenter
         return viewController
     }
