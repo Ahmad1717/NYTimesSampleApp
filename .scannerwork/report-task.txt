@@ -2,5 +2,5 @@ projectKey=com.s4m.NYTimesSampleApp
 serverUrl=http://localhost:9000
 serverVersion=8.5.1.38104
 dashboardUrl=http://localhost:9000/dashboard?id=com.s4m.NYTimesSampleApp
-ceTaskId=AXXg2KX3zxo3yLqfLigv
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXXg2KX3zxo3yLqfLigv
+ceTaskId=AXXg33Xczxo3yLqfLig0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXXg33Xczxo3yLqfLig0
