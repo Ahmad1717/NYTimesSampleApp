@@ -13,7 +13,7 @@ protocol ArticleCellPresentable {
 }
 
 class ArticleCell: UITableViewCell {
-    
+
     @IBOutlet private weak var titleLabel: UILabel?
     @IBOutlet private weak var bylineLabel: UILabel?
     @IBOutlet private weak var publishedDateLabel: UILabel?

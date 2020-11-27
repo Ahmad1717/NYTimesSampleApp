@@ -13,7 +13,7 @@ protocol Identifiable {
 }
 
 extension UIResponder: Identifiable {
-    
+
     static var identifier: String {
         return "\(self)"
     }

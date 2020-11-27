@@ -11,7 +11,7 @@ import Foundation
 
 class ArticleCellSpy: ArticleCellPresentable {
     var configreCallCount = 0
-    
+
     func configure(with item: Article) {
         configreCallCount += 1
     }

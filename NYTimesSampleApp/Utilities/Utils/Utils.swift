@@ -12,7 +12,7 @@ typealias GenericClosure<T> = (T) -> Void
 
 // find top most view controller
 func topController() -> UIViewController? {
-    
+
     // recursive follow
     func follow(_ from: UIViewController?) -> UIViewController? {
         if let to = (from as? UITabBarController)?.selectedViewController {
@@ -25,8 +25,8 @@ func topController() -> UIViewController? {
             return from
         }
     }
-    
+
     let root = UIApplication.shared.keyWindow?.rootViewController
-    
+
     return follow(root)
 }

@@ -11,7 +11,7 @@ import Foundation
 
 class ListingViewSpy: ListingPresentable {
     var reloadDataCount = 0
-    
+
     func reloadData() {
         reloadDataCount += 1
     }

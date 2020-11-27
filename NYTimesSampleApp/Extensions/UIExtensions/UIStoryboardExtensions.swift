@@ -9,14 +9,13 @@
 import UIKit
 
 extension UIStoryboard {
-    
+
     enum Storyboard: String {
-        
+
         case main              = "Main"
     }
-    
+
     convenience init(storyboard: Storyboard, bundle: Bundle? = nil) {
         self.init(name: storyboard.rawValue, bundle: bundle)
     }
 }
-

@@ -13,18 +13,18 @@ class WelcomViewSpy: WelcomePresentable {
     var showLoadingCallCount = 0
     var hideLoadingCallCount = 0
     var showListingCallCount = 0
-    
+
     var passedDataSource: [Article]?
-    
+
     func showLoadingIndicator() {
         showLoadingCallCount += 1
     }
-    
+
     func hideLoadingIndicator() {
         hideLoadingCallCount += 1
     }
-    
-    func ShowListingController(dataSource: [Article]) {
+
+    func showListingController(dataSource: [Article]) {
         showListingCallCount += 1
         passedDataSource = dataSource
     }

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol ServiceProtocol {
     func request<T: Decodable>(wrapper: ServiceWrapper, completion: @escaping GenericClosure<Result<T>>)
 }

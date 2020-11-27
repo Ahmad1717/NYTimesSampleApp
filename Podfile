@@ -8,6 +8,7 @@ target 'NYTimesSampleApp' do
   # Pods for NYTimesSampleApp
 	pod 'Alamofire',                '~> 5.0.2'
   pod 'NVActivityIndicatorView',  '~> 4.8.0'
+  pod 'SwiftLint',                '~> 0.41.0'
 
   target 'NYTimesSampleAppTests' do
     inherit! :search_paths

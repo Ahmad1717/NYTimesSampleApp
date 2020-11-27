@@ -9,32 +9,32 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-    
+
     var presenter: WelcomePresenterInput?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureView()
     }
-    
+
     @IBAction private func buttonActionGetStarted(_ sender: UIButton) {
-        
+
         // fetch data
         presenter?.fetchData()
     }
 }
-    
+
 extension WelcomeViewController: WelcomePresentable {
     func showLoadingIndicator() {
         LoadingIndicator.shared.show()
     }
-    
+
     func hideLoadingIndicator() {
         LoadingIndicator.shared.dismiss()
     }
-    
-    func ShowListingController(dataSource: [Article]) {
+
+    func showListingController(dataSource: [Article]) {
         Configurator.createListingController(dataSource: dataSource).push()
     }
 }

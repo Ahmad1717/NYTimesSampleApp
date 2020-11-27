@@ -10,11 +10,10 @@ import UIKit
 
 // Register cell functions
 extension UITableView {
-    func register<T: UITableViewCell>(_ : T.Type){
+    func register<T: UITableViewCell>(_ : T.Type) {
         register(T.self, forCellReuseIdentifier: T.identifier)
     }
-    
-    
+
     func registerNib<T: UITableViewCell>(_ : T.Type) {
         register(T.nib, forCellReuseIdentifier: T.identifier)
     }

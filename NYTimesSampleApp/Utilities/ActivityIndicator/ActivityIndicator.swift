@@ -9,18 +9,18 @@
 import NVActivityIndicatorView
 
 class LoadingIndicator: UIViewController, NVActivityIndicatorViewable {
-    
+
     private var activityView: NVActivityIndicatorView?
-    
+
     // singleton
     static let shared = LoadingIndicator()
-    
+
     // show loading indicator
      func show() {
         let size = CGSize(width: 50, height: 50)
         startAnimating(size, message: "", type: .lineScalePulseOutRapid, color: .navigationColor, backgroundColor: .clear)
     }
-    
+
     // dismiss loading indicator
     func dismiss() {
         stopAnimating()

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-    
+
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -19,7 +19,7 @@ extension UIView {
             layer.masksToBounds = newValue > 0.0
         }
     }
-    
+
     @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth
@@ -28,7 +28,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-    
+
     @IBInspectable var borderColor: UIColor? {
         get {
             guard let borderCgColor = layer.borderColor else { return nil }
@@ -41,17 +41,17 @@ extension UIView {
 }
 
 extension UIView {
-    
+
     // instantiate view from nib
     class func instantiateFromNib<T: UIView>() -> T? {
         return nib.instantiate(withOwner: nil, options: nil).first as? T
     }
-    
+
     // get nib from bundle
     class var nib: UINib {
         return UINib(nibName: nibName, bundle: nil)
     }
-    
+
     // get nib name
     class var nibName: String {
         return identifier

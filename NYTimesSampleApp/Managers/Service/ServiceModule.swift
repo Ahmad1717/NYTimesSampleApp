@@ -25,19 +25,19 @@ protocol ServiceModule {
 }
 
 extension ServiceModule {
-    
+
     func url(baseUrl: URL?) -> URL? {
-        
+
         var url = baseUrl
-        
+
         if let module = module {
             url?.appendPathComponent("/\(module.rawValue)")
         }
-        
+
         if let path = path {
             url?.appendPathComponent("/\(path.rawValue)")
         }
-        
+
         return url
     }
 }
@@ -55,7 +55,7 @@ enum RequestMethod: String {
 }
 
 enum Module: String {
-    case viewed = "viewed"
+    case viewed
 }
 
 enum Path: String {

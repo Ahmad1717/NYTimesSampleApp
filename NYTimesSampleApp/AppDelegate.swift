@@ -10,12 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         rootViewController = Configurator.createWelcomeController()
         return true
     }
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     static var shared: AppDelegate? { UIApplication.shared.delegate as? AppDelegate }
-    
+
     var rootViewController: UIViewController? {
         get { return window?.rootViewController }
         set {

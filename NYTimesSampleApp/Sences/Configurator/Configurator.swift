@@ -8,16 +8,15 @@
 
 import Foundation
 
-
 class Configurator {
 
-    static func createListingController(dataSource:  [Article]) -> ListingViewController {
+    static func createListingController(dataSource: [Article]) -> ListingViewController {
         let viewController = ListingViewController.instantiate()
         let presenter = ListingPresenter(view: viewController, dataSource: dataSource)
         viewController.presenter = presenter
         return viewController
     }
-    
+
     static func createWelcomeController() -> WelcomeViewController {
         let viewController = WelcomeViewController.instantiate()
         let presenter = WelcomePresenter(view: viewController, interactor: ServiceManager.shared)

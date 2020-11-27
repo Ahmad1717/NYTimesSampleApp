@@ -9,14 +9,14 @@
 import UIKit
 
 class ListingViewController: BaseViewController {
-    
+
     var presenter: ListingPresenterInput?
-    
+
     @IBOutlet private (set) weak var tableView: UITableView?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureView()
     }
 }
@@ -30,7 +30,7 @@ private extension ListingViewController {
 
 extension ListingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { presenter?.numberOfRows ?? 0 }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ArticleCell.identifier) as? ArticleCell else { return UITableViewCell()}
         presenter?.configre(cell: cell, at: indexPath)
@@ -39,9 +39,8 @@ extension ListingViewController: UITableViewDataSource {
 }
 
 extension ListingViewController: ListingPresentable {
-    
+
     func reloadData() {
         tableView?.reloadData()
     }
 }
-

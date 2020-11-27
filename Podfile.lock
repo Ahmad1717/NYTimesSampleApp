@@ -3,20 +3,24 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - SwiftLint (0.41.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.2)
   - NVActivityIndicatorView (~> 4.8.0)
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - NVActivityIndicatorView
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: 1d88e195fc731e0fef262c2a63b90dcd55f871c2
+PODFILE CHECKSUM: bb95ded84ec5e8dbe59c8d13673485beb844cc3e
 
 COCOAPODS: 1.10.0

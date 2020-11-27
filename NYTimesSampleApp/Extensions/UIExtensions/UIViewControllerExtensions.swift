@@ -16,17 +16,17 @@ protocol Instantiatable {
 extension UIViewController: Instantiatable { }
 
 extension Instantiatable where Self: UIViewController {
-    
+
     static func instantiateInitalViewController(from storyboardIdentifier: UIStoryboard.Storyboard) -> Self {
-        
+
         guard let viewController = UIStoryboard(storyboard: storyboardIdentifier).instantiateInitialViewController() as? Self else {
             return Self()
         }
         return viewController
     }
-    
+
     static func instantiate(from storyboardIdentifier: UIStoryboard.Storyboard = .main) -> Self {
-        
+
         guard let viewController = UIStoryboard(storyboard: storyboardIdentifier).instantiateViewController(withIdentifier: identifier) as? Self else {
             return Self()
         }
