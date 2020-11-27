@@ -26,6 +26,10 @@ final class WelcomeViewController: UIViewController {
 }
 
 extension WelcomeViewController: WelcomePresentable {
+    func showAlert(error: Error) {
+        Alert.ok("", "") { }
+    }
+
     func showLoadingIndicator() {
         LoadingIndicator.shared.show()
     }

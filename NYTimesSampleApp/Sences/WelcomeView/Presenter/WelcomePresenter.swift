@@ -6,7 +6,7 @@
 //  Copyright © 2020 Ahmad Jabri. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol WelcomePresenterInput {
 
@@ -18,6 +18,7 @@ protocol WelcomePresentable: AnyObject {
     func showLoadingIndicator()
     func hideLoadingIndicator()
     func showListingController(dataSource: [Article])
+    func showAlert(error: Error)
 }
 
 final class WelcomePresenter: WelcomePresenterInput {
@@ -25,7 +26,7 @@ final class WelcomePresenter: WelcomePresenterInput {
     private weak var view: WelcomePresentable?
     private var interactor: ServiceProtocol?
 
-    var title: String { "Welcome" }
+    var title: String { &&"Common.Welcome" }
 
     init(view: WelcomePresentable, interactor: ServiceProtocol) {
         self.view = view
@@ -44,7 +45,7 @@ final class WelcomePresenter: WelcomePresenterInput {
 
             switch result {
             case .success(let response): weakSelf.view?.showListingController(dataSource: response.results ?? [Article]())
-            case .failure(let error): print(error)
+            case .failure(let error): weakSelf.view?.showAlert(error: error)
             }
         }
     }

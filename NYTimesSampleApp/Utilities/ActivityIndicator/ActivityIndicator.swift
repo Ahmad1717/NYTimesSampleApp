@@ -16,9 +16,9 @@ class LoadingIndicator: UIViewController, NVActivityIndicatorViewable {
     static let shared = LoadingIndicator()
 
     // show loading indicator
-     func show() {
+    func show(message: String = "", color: UIColor = .navigationColor, backgroundColor: UIColor = .clear) {
         let size = CGSize(width: 50, height: 50)
-        startAnimating(size, message: "", type: .lineScalePulseOutRapid, color: .navigationColor, backgroundColor: .clear)
+        startAnimating(size, message: message, type: .lineScalePulseOutRapid, color: color, backgroundColor: backgroundColor)
     }
 
     // dismiss loading indicator

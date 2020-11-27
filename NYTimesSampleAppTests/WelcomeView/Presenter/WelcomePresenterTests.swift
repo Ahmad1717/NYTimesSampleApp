@@ -9,7 +9,7 @@
 import XCTest
 @testable import NYTimesSampleApp
 
-class WelcomePresnterTests: XCTestCase {
+class WelcomePresenterTests: XCTestCase {
 
     var viewSpy: WelcomViewSpy!
     var presenter: WelcomePresenterInput!

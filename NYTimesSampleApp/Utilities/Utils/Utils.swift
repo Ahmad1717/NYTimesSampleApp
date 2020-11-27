@@ -9,6 +9,7 @@
 import UIKit
 
 typealias GenericClosure<T> = (T) -> Void
+typealias VoidClosure = () -> Void
 
 // find top most view controller
 func topController() -> UIViewController? {

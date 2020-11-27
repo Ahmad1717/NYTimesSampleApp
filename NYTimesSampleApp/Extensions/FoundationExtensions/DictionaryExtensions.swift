@@ -18,20 +18,3 @@ extension Dictionary {
         }
     }
 }
-
-extension Decodable {
-
-    static func decode<T: Decodable>(path: String, completion: @escaping (Result<T>) -> Void) {
-        guard let path = Bundle.main.path(forResource: path, ofType: "json") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            let data = try Data(contentsOf: url)
-            let loginResponse = try JSONDecoder().decode(T.self, from: data)
-
-            completion(.success(loginResponse))
-
-        } catch let error {
-            completion(.failure(error))
-        }
-    }
-}

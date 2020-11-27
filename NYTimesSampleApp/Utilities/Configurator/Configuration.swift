@@ -12,7 +12,7 @@ final class Configuration {
 
     static let current = Configuration()
 
-    var all = Parameters()
+    var parameters = Parameters()
 
     private var environment: Environment {
 
@@ -23,7 +23,7 @@ final class Configuration {
     }
 
     private init() {
-        all = Bundle.main.infoDictionary?["Configuration"] as? Parameters ?? [:]
+        parameters = Bundle.main.infoDictionary?["Configuration"] as? Parameters ?? [:]
     }
 }
 
@@ -78,7 +78,7 @@ private extension Configuration {
         var module: String?
 
         static var attributes: Parameters {
-            return Configuration.current.all["Environment"] as? Parameters ?? [:]
+            return Configuration.current.parameters["Environment"] as? Parameters ?? [:]
         }
 
         private enum CodingKeys: String, CodingKey {

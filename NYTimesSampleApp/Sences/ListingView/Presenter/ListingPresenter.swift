@@ -30,7 +30,7 @@ final class ListingPresenter: ListingPresenterInput {
     private weak var view: ListingPresentable?
 
     var numberOfRows: Int { articles.count }
-    var title: String { "NY Time Most Popular" }
+    var title: String { &&"Common.NYTimes.Title" }
 
     init(view: ListingPresentable, dataSource: [Article]) {
         self.view = view

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="NYTimesSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uei-3V-Zi6">
+                                <rect key="frame" x="16" y="786" width="382" height="40"/>
+                                <color key="backgroundColor" name="NavigationColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8sg-R2-uzt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonActionGetStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NB-XR-cxO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uei-3V-Zi6" secondAttribute="bottom" constant="36" id="U1c-dy-lyF"/>
+                            <constraint firstItem="Uei-3V-Zi6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fnc-J7-sjI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uei-3V-Zi6" secondAttribute="trailing" constant="16" id="ppm-gc-rAB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kct-yZ-BMy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Listing View Controller-->
+        <scene sceneID="Hk0-KI-blb">
+            <objects>
+                <viewController storyboardIdentifier="ListingViewController" id="GeL-uC-71X" customClass="ListingViewController" customModule="NYTimesSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lEY-8j-tFz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-MW-3Mb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GeL-uC-71X" id="Dqy-Kd-NxY"/>
+                                    <outlet property="delegate" destination="GeL-uC-71X" id="rl4-T0-GWN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d6M-MW-3Mb" firstAttribute="leading" secondItem="gsd-ln-9kj" secondAttribute="leading" id="4br-We-OQ2"/>
+                            <constraint firstAttribute="bottom" secondItem="d6M-MW-3Mb" secondAttribute="bottom" id="7Ze-wY-ouW"/>
+                            <constraint firstItem="d6M-MW-3Mb" firstAttribute="top" secondItem="gsd-ln-9kj" secondAttribute="top" id="Msm-fs-X02"/>
+                            <constraint firstItem="gsd-ln-9kj" firstAttribute="trailing" secondItem="d6M-MW-3Mb" secondAttribute="trailing" id="mig-3P-jPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gsd-ln-9kj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q18-PQ-4no">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="v3b-XN-cO3">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MXr-bR-eKt">
+                                <rect key="frame" x="20" y="10" width="24" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Menu"/>
+                            </button>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="Mgw-JI-VTi">
+                                <inset key="largeContentSizeImageInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="865-KI-xSe">
+                                    <rect key="frame" x="340" y="10" width="54" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" image="More"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="bkT-Rp-KkS">
+                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cZc-RD-udH">
+                                    <rect key="frame" x="268" y="10" width="64" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <inset key="contentEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" image="Search"/>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="d6M-MW-3Mb" id="Rf5-AV-Tzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3g-Fm-IJB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Menu" width="24" height="24"/>
+        <image name="More" width="24" height="24"/>
+        <image name="Search" width="24" height="24"/>
+        <namedColor name="NavigationColor">
+            <color red="0.4699999988079071" green="0.88200002908706665" blue="0.76399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
