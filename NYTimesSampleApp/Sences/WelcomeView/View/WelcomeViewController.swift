@@ -27,7 +27,7 @@ final class WelcomeViewController: UIViewController {
 
 extension WelcomeViewController: WelcomePresentable {
     func showAlert(error: Error) {
-        Alert.ok("", "") { }
+        Alert(title: &&"Common.Error", message: error.localizedDescription, preferredStyle: .alert).addAction(title: &&"Common.Ok", style: .default, handler: nil).build().show()
     }
 
     func showLoadingIndicator() {

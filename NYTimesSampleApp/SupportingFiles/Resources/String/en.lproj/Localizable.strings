@@ -8,5 +8,9 @@
 
 // MARK: - Common
 "Common.Welcome" = "Welocme";
+"Common.Error" = "Error";
+"Common.Ok" = "Ok";
+
+// MARK: - Most Popular Module
 "Common.NYTimes.Title" = "NY Time Most Popular";
 

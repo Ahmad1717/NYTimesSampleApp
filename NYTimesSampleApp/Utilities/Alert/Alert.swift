@@ -8,75 +8,26 @@
 
 import UIKit
 
-class Alert: NSObject {
+class Alert {
 
-    let style: UIAlertController.Style
-    var title: String?
-    var message: String?
-    var actions: [UIAlertAction] = []
+    private var alertController: UIAlertController
 
-    init(style: UIAlertController.Style) {
-        self.style = style
+    init(title: String? = nil, message: String? = nil, preferredStyle: UIAlertController.Style) {
+        alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
     }
 
-    static func alert(_ title: String = "", message: String = "") -> Alert {
-        return Alert(style: .alert).title(title).message(message)
-    }
-
-    static func sheet() -> Alert {
-        return Alert(style: .actionSheet)
-    }
-
-    static func sheet(_ title: String) -> Alert {
-        return sheet().title(title)
-    }
-
-    func title(_ title: String?) -> Alert {
-        self.title = title
+    func addAction(title: String = "", style: UIAlertAction.Style = .default, handler: (() -> Void)? = { }) -> Self {
+        alertController.addAction(UIAlertAction(title: title, style: style, handler: { _ in handler?() }))
         return self
     }
 
-    func message(_ message: String?) -> Alert {
-        self.message = message
-        return self
+    func build() -> UIAlertController {
+        return alertController
     }
+}
 
-    @discardableResult func ok(_ button: String) -> Alert {
-        return ok(button: button, callback: nil)
-    }
-
-    func ok(button: String, callback: VoidClosure?) -> Alert {
-        actions.append(UIAlertAction(title: button, style: .default) { _ in
-            callback?()
-        })
-        return self
-    }
-
-    // to display/ present the alert
-    func show() {
-
-        if actions.isEmpty {
-            ok(&&"Common.Ok")
-        }
-
-        // create alert
-        let viewController = UIAlertController(title: title, message: message, preferredStyle: style)
-        actions.forEach { viewController.addAction($0) }
-
-        DispatchQueue.main.async {
-            Alert.present(viewController)
-        }
-    }
-
-    // alert with ok button only with action
-    static func ok(_ title: String, _ message: String?, okButtonTitle: String = &&"General.Ok", _ callback: @escaping VoidClosure) {
-        alert(title).message(message).ok(button: okButtonTitle, callback: callback).show()
-    }
-
-    // to present the alert
-    fileprivate static func present(_ viewController: UIViewController) {
-        if let topController = topController() {
-            topController.present(viewController, animated: true, completion: nil)
-        }
+extension UIAlertController {
+    func show(animated: Bool = true, completionHandler: (() -> Void)? = nil) {
+        topController()?.present(self, animated: animated, completion: completionHandler)
     }
 }
