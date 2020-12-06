@@ -10,6 +10,7 @@ import Foundation
 @testable import NYTimesSampleApp
 
 class WelcomViewSpy: WelcomePresentable {
+    
     var showLoadingCallCount = 0
     var hideLoadingCallCount = 0
     var showListingCallCount = 0
@@ -27,5 +28,9 @@ class WelcomViewSpy: WelcomePresentable {
     func showListingController(dataSource: [Article]) {
         showListingCallCount += 1
         passedDataSource = dataSource
+    }
+    
+    func showAlert(error: Error) {
+        
     }
 }
