@@ -8,7 +8,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.2)
   - NVActivityIndicatorView (~> 4.8.0)
-  - SwiftLint
+  - SwiftLint (~> 0.41.0)
 
 SPEC REPOS:
   trunk:
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: bb95ded84ec5e8dbe59c8d13673485beb844cc3e
+PODFILE CHECKSUM: b2f71c4a4c2515dba59dcd875daffd64c6fb6266
 
 COCOAPODS: 1.10.0

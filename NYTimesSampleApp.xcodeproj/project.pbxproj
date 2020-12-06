@@ -39,7 +39,6 @@
 		EA52E16925666B170009E2C1 /* ListingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52E16825666B170009E2C1 /* ListingViewSpy.swift */; };
 		EA52E16B25666D3E0009E2C1 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52E16A25666D3E0009E2C1 /* Creator.swift */; };
 		EA52E16D25667E0A0009E2C1 /* ArticleCellSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA52E16C25667E0A0009E2C1 /* ArticleCellSpy.swift */; };
-		EA545A942571569E00C60630 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A932571569E00C60630 /* DecodableExtensions.swift */; };
 		EA545A992571608200C60630 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA545A9B2571608200C60630 /* Localizable.strings */; };
 		EA545A9D257160C400C60630 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA545A9C257160C400C60630 /* StringExtensions.swift */; };
 		EA545AA92571621500C60630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA545AA52571621500C60630 /* LaunchScreen.storyboard */; };
@@ -106,7 +105,6 @@
 		EA52E16825666B170009E2C1 /* ListingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewSpy.swift; sourceTree = "<group>"; };
 		EA52E16A25666D3E0009E2C1 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		EA52E16C25667E0A0009E2C1 /* ArticleCellSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellSpy.swift; sourceTree = "<group>"; };
-		EA545A932571569E00C60630 /* DecodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		EA545A9A2571608200C60630 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EA545A9C257160C400C60630 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		EA545AA62571621500C60630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				05A778582565139500CD2A8C /* DictionaryExtensions.swift */,
-				EA545A932571569E00C60630 /* DecodableExtensions.swift */,
 				EA545A9C257160C400C60630 /* StringExtensions.swift */,
 			);
 			path = FoundationExtensions;
@@ -545,8 +542,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 057BB5B52564FE8600015C48 /* Build configuration list for PBXNativeTarget "NYTimesSampleApp" */;
 			buildPhases = (
-				EA545A92257145F900C60630 /* ShellScript */,
 				62F75053A3639264B59C996A /* [CP] Check Pods Manifest.lock */,
+				EA545A92257145F900C60630 /* ShellScript */,
 				057BB5922564FE8500015C48 /* Sources */,
 				057BB5932564FE8500015C48 /* Frameworks */,
 				057BB5942564FE8500015C48 /* Resources */,
@@ -753,7 +750,6 @@
 				EAA0C8842565BDAA000EB48F /* UIStoryboardExtensions.swift in Sources */,
 				EAA0C88825663BF3000EB48F /* Configurator.swift in Sources */,
 				05A778672565502100CD2A8C /* BaseViewController.swift in Sources */,
-				EA545A942571569E00C60630 /* DecodableExtensions.swift in Sources */,
 				05A7787425655B5100CD2A8C /* ArticleCell.swift in Sources */,
 				057BB59C2564FE8500015C48 /* SceneDelegate.swift in Sources */,
 				EAA0C8802565BD3B000EB48F /* Navigatable.swift in Sources */,
