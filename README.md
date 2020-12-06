@@ -18,4 +18,8 @@ Built using XCode 11.5
 4. open the terminal
 5. run fastlane metrics
 
+#### Sonarqube
+
+<img width="1518" alt="Screen Shot 2020-12-06 at 9 07 40 PM" src="https://user-images.githubusercontent.com/35212533/101287196-40069880-3808-11eb-8640-c6bf48d400a6.png">
+
 Thank you!
