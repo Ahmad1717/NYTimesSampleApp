@@ -37,11 +37,6 @@ class ListingViewControllerTests: XCTestCase {
             XCTAssertTrue(sut.presenter?.numberOfRows == 3)
         }
     }
-
-    func testArticleCell() {
-        let cell = sut?.tableView?.cellForRow(at: IndexPath(row: 0, section: 0)) as? ArticleCell
-        XCTAssertTrue(cell?.titleLabel?.text == "titl1")
-    }
 }
 
 private extension ListingViewControllerTests {

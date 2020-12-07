@@ -32,6 +32,21 @@ class WelcomeViewControllerTests: XCTestCase {
     func testSidTapGetStarted() {
         sut?.didTapGetStarted()
     }
+
+    func testAlert() {
+        let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Error"])
+        sut?.showAlert(error: error)
+
+        _ = XCTWaiter.wait(for: [XCTestExpectation(description: "wait 1 sec")], timeout: 1)
+        XCTAssertTrue(topController() is UIAlertController)
+    }
+
+    func testNavigatableProtocol() {
+        sut?.showListingController(dataSource: MostViewedResponse.result().results ?? [])
+        _ = XCTWaiter.wait(for: [XCTestExpectation(description: "wait 1 sec")], timeout: 4)
+        XCTAssertTrue(topController() is ListingViewController)
+    }
+
 }
 
 private extension WelcomeViewControllerTests {

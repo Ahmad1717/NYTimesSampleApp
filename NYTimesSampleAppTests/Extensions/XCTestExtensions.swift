@@ -13,7 +13,7 @@ extension XCTestCase {
 
     func makeViewControllerSut<T: UIViewController>(viewController: T) -> T {
         let controller = viewController
-        AppDelegate.shared?.rootViewController = controller
+        AppDelegate.shared?.rootViewController = UINavigationController(rootViewController: controller)
         return controller
     }
 

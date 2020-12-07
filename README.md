@@ -50,13 +50,13 @@ You will see the project analyses, Tap on project analyses it will show detail r
 
 ###### Unit Test
 
-Total TestCase: 9
-Passed : 9
+Total TestCase: 10
+Passed : 10
 Failed: 0
-TestCase Code Coverage: 65.0%
+TestCase Code Coverage: 78.8%
 
-<img width="2048" alt="Screen Shot 2020-12-07 at 10 05 59 PM" src="https://user-images.githubusercontent.com/35212533/101387870-83303c80-38d8-11eb-93d1-54399adc8d28.png">
+<img width="2048" alt="Screen Shot 2020-12-08 at 1 42 39 AM" src="https://user-images.githubusercontent.com/35212533/101409106-d5805600-38f6-11eb-9109-be2b6f331f60.png">
 
-<img width="2046" alt="Screen Shot 2020-12-07 at 10 05 50 PM" src="https://user-images.githubusercontent.com/35212533/101387887-8c210e00-38d8-11eb-938e-9d8c97e70d40.png">
+<img width="2045" alt="Screen Shot 2020-12-08 at 1 42 25 AM" src="https://user-images.githubusercontent.com/35212533/101409124-dc0ecd80-38f6-11eb-89ac-dfa0c3bfe32e.png">
 
 Thank you!

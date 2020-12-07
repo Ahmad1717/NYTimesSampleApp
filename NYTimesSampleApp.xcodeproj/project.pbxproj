@@ -184,7 +184,6 @@
 		057BB5AF2564FE8600015C48 /* NYTimesSampleAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				05B54D07257E9CA000C0230E /* Utils */,
 				05D44660257E5A0B00A16D1B /* Extensions */,
 				EA52E15825665E710009E2C1 /* ListingView */,
 				EA52E15725665E6A0009E2C1 /* WelcomeView */,
@@ -323,13 +322,6 @@
 				05A778682565510100CD2A8C /* Color.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		05B54D07257E9CA000C0230E /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		05D44660257E5A0B00A16D1B /* Extensions */ = {
