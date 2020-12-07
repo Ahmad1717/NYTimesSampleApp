@@ -33,11 +33,17 @@ Install fastlane using gem install fastlane
 This is also another tool integrated for check project code health reports.
 
 Install and setup your SonaQube server and other dependency for sonarQube integration with the help of https://github.com/Backelite/sonar-swift or another source.
+
 Project already contains  sonar-project.properties in project root folder.
+
 open sonar-project.properties and increase sonar.projectVersion
+
 Once your server up, goto project directory and run the sonar-scanner command from terminal.
+
 After successful scan -
- open browser and hit http://localhost:9000/,
+
+open browser and hit http://localhost:9000/,
+
 You will see the project analyses, Tap on project analyses it will show detail reports
 
 <img width="1518" alt="Screen Shot 2020-12-06 at 9 07 40 PM" src="https://user-images.githubusercontent.com/35212533/101287196-40069880-3808-11eb-8640-c6bf48d400a6.png">
