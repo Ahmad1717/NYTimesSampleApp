@@ -10,10 +10,11 @@ import Foundation
 @testable import NYTimesSampleApp
 
 class WelcomViewSpy: WelcomePresentable {
-    
+
     var showLoadingCallCount = 0
     var hideLoadingCallCount = 0
     var showListingCallCount = 0
+    var showErrorCallCount = 0
 
     var passedDataSource: [Article]?
 
@@ -29,8 +30,8 @@ class WelcomViewSpy: WelcomePresentable {
         showListingCallCount += 1
         passedDataSource = dataSource
     }
-    
+
     func showAlert(error: Error) {
-        
+        showErrorCallCount += 1
     }
 }

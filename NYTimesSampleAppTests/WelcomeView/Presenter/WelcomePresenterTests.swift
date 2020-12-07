@@ -27,6 +27,7 @@ class WelcomePresenterTests: XCTestCase {
     }
 
     func testFetchDataSuccess() {
+
         //Given
         stub.resultShouldBeReturn = MostViewedResponse.result()
 
@@ -36,7 +37,22 @@ class WelcomePresenterTests: XCTestCase {
         //Then
         XCTAssertEqual(viewSpy.showListingCallCount, 1)
         XCTAssertEqual(viewSpy.hideLoadingCallCount, 1)
-        XCTAssertEqual(viewSpy.showListingCallCount, 1)
+        XCTAssertEqual(viewSpy.showErrorCallCount, 0)
         XCTAssertEqual(viewSpy.passedDataSource?.count, 3)
+    }
+
+    func testFetchDataFailure() {
+
+        //Given
+        stub.resultShouldBeReturn = nil
+
+        //When
+        presenter.fetchData()
+
+        //Then
+        XCTAssertEqual(viewSpy.showLoadingCallCount, 1)
+        XCTAssertEqual(viewSpy.hideLoadingCallCount, 1)
+        XCTAssertEqual(viewSpy.showErrorCallCount, 1)
+        XCTAssertEqual(viewSpy.passedDataSource?.count, nil)
     }
 }

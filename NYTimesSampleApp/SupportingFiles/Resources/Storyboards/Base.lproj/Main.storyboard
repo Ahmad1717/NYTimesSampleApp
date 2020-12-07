@@ -78,7 +78,7 @@
                         <viewLayoutGuide key="safeArea" id="gsd-ln-9kj"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q18-PQ-4no">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="v3b-XN-cO3">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="v3b-XN-cO3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MXr-bR-eKt">
                                 <rect key="frame" x="20" y="10" width="24" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,7 +86,7 @@
                             </button>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="Mgw-JI-VTi">
+                            <barButtonItem style="done" id="Mgw-JI-VTi">
                                 <inset key="largeContentSizeImageInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="865-KI-xSe">
                                     <rect key="frame" x="340" y="10" width="54" height="24"/>
@@ -95,7 +95,7 @@
                                     <state key="normal" image="More"/>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="bkT-Rp-KkS">
+                            <barButtonItem style="done" id="bkT-Rp-KkS">
                                 <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="50" maxY="0.0"/>
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cZc-RD-udH">
                                     <rect key="frame" x="268" y="10" width="64" height="24"/>

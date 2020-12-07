@@ -19,6 +19,12 @@ final class WelcomeViewController: UIViewController {
     }
 
     @IBAction private func buttonActionGetStarted(_ sender: UIButton) {
+        didTapGetStarted()
+    }
+}
+
+extension WelcomeViewController {
+    func didTapGetStarted() {
 
         // fetch data
         presenter?.fetchData()
