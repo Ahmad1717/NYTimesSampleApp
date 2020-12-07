@@ -14,9 +14,9 @@ protocol ArticleCellPresentable {
 
 class ArticleCell: UITableViewCell {
 
-    @IBOutlet private weak var titleLabel: UILabel?
-    @IBOutlet private weak var bylineLabel: UILabel?
-    @IBOutlet private weak var publishedDateLabel: UILabel?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var bylineLabel: UILabel?
+    @IBOutlet weak var publishedDateLabel: UILabel?
 }
 
 extension ArticleCell: ArticleCellPresentable {

@@ -8,12 +8,18 @@
 
 import NVActivityIndicatorView
 
-class LoadingIndicator: UIViewController, NVActivityIndicatorViewable {
+protocol LoadingIndicatorProtocol {
+    func show(message: String, color: UIColor, backgroundColor: UIColor)
+    func dismiss()
+}
 
-    private var activityView: NVActivityIndicatorView?
+class LoadingIndicator: UIViewController, NVActivityIndicatorViewable {
 
     // singleton
     static let shared = LoadingIndicator()
+}
+
+extension LoadingIndicator: LoadingIndicatorProtocol {
 
     // show loading indicator
     func show(message: String = "", color: UIColor = .navigationColor, backgroundColor: UIColor = .clear) {
@@ -24,6 +30,5 @@ class LoadingIndicator: UIViewController, NVActivityIndicatorViewable {
     // dismiss loading indicator
     func dismiss() {
         stopAnimating()
-        activityView?.removeFromSuperview()
     }
 }

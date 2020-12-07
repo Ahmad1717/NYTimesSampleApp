@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Result<T> where T: Decodable {
+enum Result<T> {
     case success(T)
     case failure(Error)
 }

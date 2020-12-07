@@ -21,7 +21,7 @@ class ListingViewController: BaseViewController {
     }
 }
 
-private extension ListingViewController {
+extension ListingViewController {
     func configureView() {
         title = presenter?.title ?? ""
         tableView?.registerNib(ArticleCell.self)
