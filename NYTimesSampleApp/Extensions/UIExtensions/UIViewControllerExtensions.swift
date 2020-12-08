@@ -9,21 +9,12 @@
 import UIKit
 
 protocol Instantiatable {
-    static func instantiateInitialViewController(from storyboardIdentifier: UIStoryboard.Storyboard) -> Self
     static func instantiate(from storyboardIdentifier: UIStoryboard.Storyboard) -> Self
 }
 
 extension UIViewController: Instantiatable { }
 
 extension Instantiatable where Self: UIViewController {
-
-    static func instantiateInitialViewController(from storyboardIdentifier: UIStoryboard.Storyboard) -> Self {
-
-        guard let viewController = UIStoryboard(storyboard: storyboardIdentifier).instantiateInitialViewController() as? Self else {
-            return Self()
-        }
-        return viewController
-    }
 
     static func instantiate(from storyboardIdentifier: UIStoryboard.Storyboard = .main) -> Self {
 

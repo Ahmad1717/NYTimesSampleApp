@@ -15,18 +15,11 @@ protocol ListingPresenterInput {
     func configre(cell: ArticleCellPresentable, at indexPath: IndexPath)
 }
 
-protocol ListingPresentable: AnyObject {
-    func reloadData()
-}
+protocol ListingPresentable: AnyObject {}
 
 final class ListingPresenter: ListingPresenterInput {
 
-    private var articles = [Article]() {
-        didSet {
-            view?.reloadData()
-        }
-    }
-
+    private var articles = [Article]()
     private weak var view: ListingPresentable?
 
     var numberOfRows: Int { articles.count }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ArticleCellPresentable {
-    func configure(with item: Article)
+    func configure(with item: Article?)
 }
 
 class ArticleCell: UITableViewCell {
@@ -20,9 +20,10 @@ class ArticleCell: UITableViewCell {
 }
 
 extension ArticleCell: ArticleCellPresentable {
-    func configure(with item: Article) {
-        titleLabel?.text = item.title ?? ""
-        bylineLabel?.text = item.byline ?? ""
-        publishedDateLabel?.text = item.publishedDate ?? ""
+    func configure(with item: Article?) {
+        guard let item = item else { return }
+        titleLabel?.text = item.title
+        bylineLabel?.text = item.byline
+        publishedDateLabel?.text = item.publishedDate
     }
 }

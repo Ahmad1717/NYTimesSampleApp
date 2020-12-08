@@ -31,6 +31,9 @@ class WelcomeViewControllerTests: XCTestCase {
 
     func testSidTapGetStarted() {
         sut?.didTapGetStarted()
+
+        _ = XCTWaiter.wait(for: [XCTestExpectation(description: "wait 3 sec")], timeout: 3)
+        XCTAssertTrue(topController() is ListingViewController)
     }
 
     func testAlert() {
@@ -43,7 +46,7 @@ class WelcomeViewControllerTests: XCTestCase {
 
     func testNavigatableProtocol() {
         sut?.showListingController(dataSource: MostViewedResponse.result().results ?? [])
-        _ = XCTWaiter.wait(for: [XCTestExpectation(description: "wait 1 sec")], timeout: 4)
+        _ = XCTWaiter.wait(for: [XCTestExpectation(description: "wait 4 sec")], timeout: 4)
         XCTAssertTrue(topController() is ListingViewController)
     }
 

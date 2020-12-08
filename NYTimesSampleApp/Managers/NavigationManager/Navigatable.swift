@@ -16,15 +16,6 @@ extension Navigatable where Self: UIViewController {
 
     typealias UpdateHandler = (Self) -> Void
 
-    static func push(storyBoard: UIStoryboard.Storyboard = .main, navigationController: UINavigationController? = nil, shouldPreventMultiplePushing: Bool = true, customTransition: CATransitionType? = nil, updateHandler: UpdateHandler? = nil) {
-
-        // get the view controller to push
-        let pushingController = instantiate(from: storyBoard)
-
-        // push
-        pushingController.push(navigationController: navigationController, shouldPreventMultiplePushing: shouldPreventMultiplePushing, customTransition: customTransition, updateHandler: updateHandler)
-    }
-
     func push(navigationController: UINavigationController? = nil, shouldPreventMultiplePushing: Bool = true, customTransition: CATransitionType? = nil, updateHandler: UpdateHandler? = nil) {
 
         // abort if we dont have a navigation controller

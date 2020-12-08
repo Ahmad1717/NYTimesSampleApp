@@ -38,9 +38,4 @@ extension ListingViewController: UITableViewDataSource {
     }
 }
 
-extension ListingViewController: ListingPresentable {
-
-    func reloadData() {
-        tableView?.reloadData()
-    }
-}
+extension ListingViewController: ListingPresentable {}
